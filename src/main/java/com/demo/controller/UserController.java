@@ -1,37 +1,27 @@
 package com.demo.controller;
 
-import com.demo.entity.User;
-import com.demo.service.UserService;
-import com.github.pagehelper.PageHelper;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
-
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 //RequestMappingg是一个用来处理请求地址映射的注解，可用于类或方法上。用于类上，表示类中的所有响应请求的方法都是以该地址作为父路径。
 @RestController//@RestController = @Controller+@ResponseBody
 @RequestMapping(path = "/UserController")
 public class UserController {
 
-
+/*
     @Autowired
     private  UserService userService;
 
 
     @RequestMapping(path = "getUserById")
     public User getUserById(Integer userId){
-        System.out.println("asdfasdf");
-        System.out.println(userService.getUserById(userId));
-      return   userService.getUserById(userId);
+        return null;
     }
 
 
     @RequestMapping(path = "selectExtTest")
     public List<User> selectExtTest(Integer age){
-        System.out.println("selectExtTest");
-        return   userService.selectExtTest(age);
+        return null;
     }
 
     @RequestMapping(path = "/index")
@@ -63,7 +53,7 @@ public class UserController {
     @RequestMapping(path = "getAllUser/{page}/{size}")
     public List<User> getAllUser(@RequestParam(value = "page",defaultValue = "1") Integer page, @RequestParam(value = "size",defaultValue = "3")Integer size){
         PageHelper.startPage(page,size);
-        return   userService.getAllUser();
-    }
+        return  null;// userService.getAllUser();
+    }*/
 
 }

@@ -1,26 +1,25 @@
 package com.demo.service;
 
-import com.demo.dao.UserDao;
+import com.demo.dao.UserMapper;
 import com.demo.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
-
 @Service
 public class UserService {
     @Autowired
-    private UserDao userDao;
+    private UserMapper userMapper;
 
     public User getUserById(Integer userId) {
-        return userDao.selectByPrimaryKey(userId);
+        return userMapper.selectByPrimaryKey(userId);
     }
 
-    public List<User> getAllUser() {
-        return userDao.getAllUser();
+  /*  public List<User> getAllUser() {
+        UserExample userExample=new UserExample();
+        return userMapper.selectByExample();
     }
 
     public List<User> selectExtTest(Integer age) {
-        return userDao.selectExtTest(age);
-    }
+        return userMapper.selectExtTest(age);
+    }*/
 }
