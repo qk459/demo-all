@@ -1,6 +1,5 @@
-package com.example.demoall;
-
-import org.junit.jupiter.api.Test;
+package com;
+import org.junit.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest

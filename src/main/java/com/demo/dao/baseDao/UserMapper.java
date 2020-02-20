@@ -1,9 +1,6 @@
-package com.example.demoall.demo.dao.baseDao;
+package com.demo.dao.baseDao;
 
 import com.demo.entity.User;
-import org.apache.ibatis.annotations.Mapper;
-
-
 
 public interface UserMapper {
     int deleteByPrimaryKey(Integer userId);

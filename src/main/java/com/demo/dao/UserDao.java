@@ -1,4 +1,4 @@
-package com.example.demoall.demo.dao;
+package com.demo.dao;
 
 import com.demo.dao.baseDao.UserMapper;
 import com.demo.entity.User;
@@ -17,4 +17,6 @@ import java.util.List;
 public interface UserDao extends UserMapper {
     @Select("select * from user")
     List<User> getAllUser();
+    @Select("select * from user where age=#{age}")
+    List<User>  selectExtTest(Integer age);
 }

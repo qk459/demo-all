@@ -1,0 +1,15 @@
+一、springBoot文件加载顺序
+1.META/resources >resources>static >public  只会从这几个文件查找，找寻不到就会报错
+这几个资源文件内容可以直接访问不用通过controller进行跳转
+
+
+二、启动类必须放在根目录
+
+
+
+
+
+三、现在想要将配置文件的功能更加清晰化，项目如果需要配置多个配置文件，那么
+在原始配置文件application.properties的 首行 加上 spring.profiles.active=
+多个配置文件名称需要用名字来进行区分。
+ spring.profiles.active也可用来区分用哪一个配置文件，比如测试环境和生产环境配置区分

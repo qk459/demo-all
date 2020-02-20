@@ -1,4 +1,4 @@
-package com.example.demoall.demo.service;
+package com.demo.service;
 
 import com.demo.dao.UserDao;
 import com.demo.entity.User;
@@ -18,5 +18,9 @@ public class UserService {
 
     public List<User> getAllUser() {
         return userDao.getAllUser();
+    }
+
+    public List<User> selectExtTest(Integer age) {
+        return userDao.selectExtTest(age);
     }
 }

@@ -1,4 +1,4 @@
-package com.example.demoall.demo.controller;
+package com.demo.controller;
 
 import com.demo.entity.User;
 import com.demo.service.UserService;
@@ -12,7 +12,7 @@ import java.util.Map;
 
 //RequestMappingg是一个用来处理请求地址映射的注解，可用于类或方法上。用于类上，表示类中的所有响应请求的方法都是以该地址作为父路径。
 @RestController//@RestController = @Controller+@ResponseBody
-@RequestMapping(path = "/com/example/demoall/demo/UserController")
+@RequestMapping(path = "/UserController")
 public class UserController {
 
 
@@ -25,6 +25,13 @@ public class UserController {
         System.out.println("asdfasdf");
         System.out.println(userService.getUserById(userId));
       return   userService.getUserById(userId);
+    }
+
+
+    @RequestMapping(path = "selectExtTest")
+    public List<User> selectExtTest(Integer age){
+        System.out.println("selectExtTest");
+        return   userService.selectExtTest(age);
     }
 
     @RequestMapping(path = "/index")
