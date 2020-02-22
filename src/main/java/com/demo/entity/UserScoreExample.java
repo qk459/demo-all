@@ -1,8 +1,8 @@
 package com.demo.entity;
 
-import javax.annotation.Generated;
 import java.util.ArrayList;
 import java.util.List;
+import javax.annotation.Generated;
 
 @Generated("User_Score")
 public class UserScoreExample {

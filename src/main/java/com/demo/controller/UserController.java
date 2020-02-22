@@ -1,5 +1,8 @@
 package com.demo.controller;
 
+import com.demo.entity.SysUser;
+import com.demo.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -8,16 +11,17 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(path = "/UserController")
 public class UserController {
 
-/*
+
     @Autowired
-    private  UserService userService;
+    private UserService userService;
 
 
     @RequestMapping(path = "getUserById")
-    public User getUserById(Integer userId){
-        return null;
+    public SysUser getUserById(Integer userId){
+        return userService.getUserById(userId);
     }
 
+/*
 
     @RequestMapping(path = "selectExtTest")
     public List<User> selectExtTest(Integer age){
@@ -54,6 +58,7 @@ public class UserController {
     public List<User> getAllUser(@RequestParam(value = "page",defaultValue = "1") Integer page, @RequestParam(value = "size",defaultValue = "3")Integer size){
         PageHelper.startPage(page,size);
         return  null;// userService.getAllUser();
-    }*/
+    }
+*/
 
 }
